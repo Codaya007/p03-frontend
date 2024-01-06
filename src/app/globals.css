@@ -1,0 +1,303 @@
+:root {
+  --max-width: 1100px;
+  --border-radius: 12px;
+  --font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+    "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+    "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --primary-color: deeppink;
+  --primary-color-text: #73777f;
+  --accent-color: #e429bc;
+  --background-color: #f4f3f7;
+  --danger-color: #dc3545;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+.title-form {
+  color: var(--primary-color);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.normal-form {
+  width: 400px;
+  margin: auto;
+  background-color: white;
+  /* border: 1px solid black; */
+  border-radius: 16px;
+  padding: 1rem 2.5rem;
+  box-shadow: 10px 10px 30px gray;
+}
+
+.form-item {
+  padding-bottom: 1.5rem;
+  width: 100%;
+  color: var(--primary-color-text);
+}
+
+.form-item label {
+  display: block;
+  padding-bottom: 0.2rem;
+}
+
+.form-item input,
+.form-item select,
+.form-item textarea {
+  width: 100%;
+  border: 1px solid #c3c6cf;
+  padding-block: 8px;
+  border-radius: 8px;
+  resize: none;
+}
+
+.button-primary {
+  background-color: var(--primary-color);
+  padding: 0.7rem 0.5rem;
+  color: white;
+  border-radius: 10px;
+  border: 1px solid var(--primary-color);
+  margin: auto 0.5rem;
+  font-size: 1rem;
+  display: block;
+  width: 100%;
+}
+
+.button-primary:hover {
+  background-color: white;
+  /* border: 1px solid var(--primary-color); */
+  color: var(--primary-color);
+  /* width: 100%; */
+}
+
+.link-primary {
+  color: var(--accent-color);
+  text-align: center;
+  display: block;
+  padding: 10px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+/*! HEADER */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  /* background-color: var(--primary-color); */
+  background-color: white;
+  height: 12vh;
+}
+
+.page-container {
+  min-height: 88vh;
+  background-color: gainsboro;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.app-header .logo {
+  display: block;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  width: 150px;
+}
+
+.user-header {
+  display: flex;
+  max-width: 450px;
+}
+
+.user-header div {
+  display: flex;
+  /* color: white; */
+  justify-content: space-between;
+}
+
+.header-username {
+  width: 130px;
+  justify-content: center;
+}
+
+.logout-button {
+  width: 100px;
+}
+
+.user-header h2 {
+  font-size: 1rem;
+}
+
+.user-header div h3 {
+  font-size: 0.75rem;
+}
+
+.user-header img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+  padding: 0 1rem;
+}
+
+.list-routes {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  text-align: center;
+}
+
+.list-routes li a {
+  display: block;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.validation-error {
+  color: var(--danger-color);
+  font-size: 0.8rem;
+}
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 90%; */
+  margin: auto;
+  /* justify-content: flex-start; */
+  justify-content: space-evenly;
+}
+
+.user-card {
+  width: 200px;
+  color: var(--primary-color);
+}
+
+.card {
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px gray;
+  color: var(--primary-color);
+  margin: 0.5rem;
+  background-color: white;
+  min-width: 250px;
+}
+
+.card div {
+  color: var(--accent-color);
+}
+
+.card .title {
+  font-size: 1.3rem;
+}
+
+.main-container {
+  width: 90%;
+  margin: auto;
+}
+
+.document-card {
+  border-radius: 15px;
+  box-shadow: 1px 1px 5px gray;
+  margin: 0.5rem;
+  padding: 0.8rem;
+  background-color: white;
+  width: 100%;
+}
+
+.document-card-body {
+  display: flex;
+  font-size: 0.8rem;
+  /* border-radius: 15px; */
+  /* box-shadow: 1px 1px 5px gray; */
+  /* margin: 0.5rem;
+  padding: 0.8rem; */
+  /* background-color: white; */
+  width: 100%;
+}
+
+.document-autor {
+  color: rgb(45, 44, 44);
+  text-align: right;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.7rem;
+}
+
+.document-card img {
+  width: 120px;
+  height: 160px;
+  margin: 0.5rem;
+  border-radius: 7px;
+}
+
+.prices {
+  width: 90%;
+  margin: auto;
+}
+
+.prices div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices div h3 {
+  text-align: left;
+}
+
+.prices div p {
+  text-align: right;
+}
+
+.document-title {
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+.document-subtitle {
+  color: var(--primary-color);
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttons .button-primary {
+  width: 180px;
+}
+
+.form-body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-body section {
+  width: 48%;
+}
+
+.document-form-container {
+  width: 600px;
+}
+
+.buttons-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.details-document {
+  width: 65%;
+  margin: auto;
+}
