@@ -48,7 +48,7 @@ export default function NavBar() {
                   <Link href={"/users"}>Usuarios</Link>
                 </li>
                 <li>
-                  <Link href={"/documents"}>Ventas</Link>
+                  <Link href={"/purchases"}>Ventas</Link>
                 </li>
               </>
             }
@@ -59,7 +59,7 @@ export default function NavBar() {
                   <Link href={"/documents/selled"}>Documentos vendidos</Link>
                 </li>
                 <li>
-                  <Link href={"/purchases/create"}>Vender</Link>
+                  <Link href={"/purchases"}>Mis ventas</Link>
                 </li>
               </>
             }

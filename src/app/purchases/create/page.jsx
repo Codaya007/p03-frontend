@@ -75,15 +75,36 @@ export default function PurchaseForm({ initialValues }) {
   }, [user]);
 
   const handleAddProduct = () => {
+    const product = products.find(product => product.id === watch("products[0].document"));
+    const qyt = parseInt(watch("products[0].qyt"));
+
+    // console.log({ product });
+
+    if (qyt > product.qyt) {
+      return alert(`El producto '${product.title}' solo tienen en inventario ${product.qyt} unidades`);
+    }
+
     const selectedProduct = {
-      title: watch("products[0].document") && products.find(product => product.id === watch("products[0].document"))?.title,
-      qyt: watch("products[0].qyt"),
+      title: watch("products[0].document") && product.title,
+      qyt,
     };
 
     // Asegúrate de que se haya seleccionado un producto y la cantidad sea mayor que 0
     if (selectedProduct.title && selectedProduct.qyt > 0) {
       setSelectedProducts([...selectedProducts, selectedProduct]);
     }
+
+    const updatedProduct = products.map(prod => {
+      if (prod.id === product.id) {
+        prod.qyt = product.qyt - qyt;
+      }
+
+      return prod
+    })
+
+    console.log({ updatedProduct });
+
+    setProducts(updatedProduct);
   }
 
   return (
